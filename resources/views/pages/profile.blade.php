@@ -45,8 +45,8 @@
 
 
 
-<nav class="sidebar vertical-scroll  ps-container ps-theme-default ps-active-y">
-    <div class="logo d-flex justify-content-between" style="background-color: green">
+<nav class="sidebar vertical-scroll  ps-container ps-theme-default ps-active-y" style="background-color: green">
+    <div class="logo d-flex justify-content-between">
         <a href="index.html"><img src="img/logoimdeewith.png" alt=""></a>
         <div class="sidebar_close_icon d-lg-none">
             <i class="ti-close"></i>
@@ -55,17 +55,11 @@
     <ul id="sidebar_menu">
         <li class="mm-active">
             <a class="has-arrow" href="index.html#" aria-expanded="false">
-
                 <div class="icon_menu">
                     <img src="img/menu-icon/dashboard.svg" alt="">
                 </div>
                 <span>Dashboard</span>
             </a>
-            <ul>
-                <li><a class="active" href="index.html">Marketing</a></li>
-                <li><a href="index_2.html">Default</a></li>
-                <li><a href="index_3.html">Dark Menu</a></li>
-            </ul>
         </li>
         <li class="">
             <a class="has-arrow" href="index.html#" aria-expanded="false">

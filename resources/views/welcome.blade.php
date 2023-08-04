@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Marketing</title>
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="icon" href="img/logoimdeewith.png" type="image/png">
 
     <link rel="stylesheet" href="css/bootstrap1.min.css" />
 
@@ -45,7 +45,18 @@
             background-size: cover;
             background-image: url("img/Background dégradé.png");
         }
-
+        #inscription, #connexion {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            width: 170px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
+        }
+        #connexion:hover{
+            background-color: #65B06D;
+        }
+        #inscription:hover {
+            background-color: #3A6083;
+        }
         @media (max-width: 767px) {
             #logo
             {
@@ -55,22 +66,28 @@
             .btn-container button {
                 margin: 0 5px;
             }
+
+            body{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("img/Background dégradé.png");
+            }
         }
 
     </style>
 </head>
 
-<body class="bg-success">
-    <div class="container" style="margin-top: 200px;">
+<body class="">
+    <div class="container-fluid" style="margin-top: 150px">
         <div class="row justify-content-center my-5">
             <div class="col-md-6 text-center">
                 <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 500px;">
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-                <a type="button" class="btn btn-primary mx-3" href="{{ route('login') }}">Connexion</a>
-                <a type="button" class="btn btn-secondary mx-3" href="{{ route('register') }}">Inscription</a>
+        <div class="row justify-content-center my-3">
+            <div class="col-lg-12 text-center">
+                <button type="button" id="inscription" class="btn mx-3 rounded-pill"  href="{{ route('register') }}" style="background-color: #65B06D;"><strong>Inscription</strong></button>
+                <button type="button"  id="connexion" class="btn mx-3 rounded-pill" href="{{ route('login') }}" style="background-color: #3A6083;"><strong>Connexion</strong></button>
             </div>
         </div>
     </div>
