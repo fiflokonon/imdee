@@ -47,6 +47,11 @@
         }
 
         @media (max-width: 767px) {
+            body{
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-image: url("img/Background dégradé.png");
+            }
             #logo
             {
                 width: 200px !important;
@@ -55,18 +60,24 @@
             .btn-container button {
                 margin: 0 5px;
             }
+            #content-logo {
+                margin-left: 100px;
+            }
+            #content{
+                margin-top: 0!important;
+            }
         }
 
     </style>
 </head>
 
 <body class="bg-success">
-<div class="container" style="margin-top: 150px;">
+<div class="container" style="margin-top: 150px;" id="content">
     <div class="row justify-content-center my-5">
-        <div class="col-lg-4 float-start" style="margin-top: 80px; padding: 20px;">
+        <div class="col-lg-4" style="margin-top: 80px; padding: 20px;" id="content-logo">
             <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 400px;">
         </div>
-        <div class="col-lg-6 float-end ">
+        <div class="col-lg-6 mr-5 ml-10" >
             <div class="row justify-content-center">
                 @if (session('error'))
                     <div class="alert alert-danger">
@@ -85,7 +96,7 @@
                 <div class="col-lg-8 white_card pt-4" style="height: 300px;">
                     <form method="POST" action="{{ route('connexion') }}">
                         @csrf
-                        <h4 class="text-center" style="color: #65B06D; font-weight: bolder; font-family: 'Poppins', sans-serif;">Se connecter</h4>
+                        <h3 class="text-center" style="color: #65B06D; font-weight: bolder; font-family: 'Poppins', sans-serif;">Se connecter</h3>
                         <div class="mb-3">
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
@@ -102,26 +113,6 @@
                     </form>
                 </div>
             </div>
-            <!--<div class="white_card card_height_250">
-                <div class="white_card_body">
-                    <form>
-                        <h2 class="text-center" style="color: green; font-weight: bolder; font-family: 'DejaVu Serif Condensed';">Se connecter</h2>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
-                        </div>
-                        <div class="mb-3 float-end text-black-50">
-                            <a href="" class="text-decoration-underline">Mot de passe oublié?</a>
-                        </div>
-                        <a type="submit" class="btn btn-primary w-100">Connexion</a>
-                        <div class="mb-3 mt-3 text-black-50 text-center">
-                            Vous n'avez de compte? <a href="{{ route('register') }}" class="text-decoration-underline">S'inscrire</a>
-                        </div>
-                    </form>
-                </div>
-            </div>-->
         </div>
     </div>
 </div>

@@ -47,13 +47,24 @@
         }
 
         @media (max-width: 767px) {
+            body{
+                background-size: auto;
+            }
             #logo
             {
                 width: 200px !important;
+                justify-content: center;
             }
 
             .btn-container button {
                 margin: 0 5px;
+            }
+            #content-logo {
+                margin-left: 100px;
+                margin-top: 0!important;
+            }
+            #content{
+                margin-top: 0!important;
             }
         }
 
@@ -61,9 +72,9 @@
 </head>
 
 <body class="bg-success">
-<div class="container" style="margin-top: 50px;">
+<div class="container" style="margin-top: 50px;" id="content">
     <div class="row justify-content-center">
-        <div class="col-lg-4 float-start" style="margin-top: 100px; padding: 20px;">
+        <div class="col-lg-4" style="margin-top: 100px; padding: 20px;" id="content-logo">
             <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 400px;">
         </div>
         <div class="col-lg-6 float-end">
@@ -119,45 +130,6 @@
                     </form>
                 </div>
             </div>
-
-            <!--<div class="white_card" style="height: 550px;">
-                <div class="white_card_body" style="height: 350px;">
-                    <form>
-                        <h2 class="text-center" style="color: green; font-weight: bolder; font-family: 'DejaVu Serif Condensed';">S'inscrire</h2>
-                        <div class="mb-3">
-                            <input type="nom" name="nom" class="form-control" id="exampleNom" aria-describedby="emailHelp" placeholder="Nom">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="prenoms" class="form-control" id="exampleInputPrenoms" placeholder="Prénoms">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email">
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" name="contact" class="form-control" id="exampleInputTel" placeholder="Contact">
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" name="password-confirmation" class="form-control" id="exampleInputPassword1" placeholder="Comfirmer mot de passe">
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" name="password-confirmation" class="form-control" id="exampleInputPassword1" placeholder="Comfirmer mot de passe">
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-6">
-                                <input type="radio" name="role" id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Recruteur</label>
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="radio" name="role"  id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Candidat(e)</label>
-                            </div>
-                        </div>
-                        <a type="submit" class="btn btn-primary w-100">Inscription</a>
-                        <div class="mb-3 mt-3 text-black-50 text-center">
-                            Vous avez déjà un compte? <a href="{{ route('login') }}" class="text-decoration-underline">Se connecter</a>
-                        </div>
-                    </form>
-                </div>
-            </div>-->
-
         </div>
     </div>
 </div>
