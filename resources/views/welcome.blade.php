@@ -49,7 +49,7 @@
             font-family: 'Poppins', sans-serif;
             color: white;
             width: 170px;
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2)
         }
         #connexion:hover{
             background-color: #65B06D;
@@ -60,7 +60,7 @@
         @media (max-width: 767px) {
             #logo
             {
-                width: 70px;
+                width: 200px !important;
             }
 
             .btn-container button {
@@ -69,8 +69,11 @@
 
             body{
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: auto;
                 background-image: url("img/Background dégradé.png");
+            }
+            #inscription, #connexion{
+                margin: 10px;
             }
         }
 
@@ -86,8 +89,8 @@
         </div>
         <div class="row justify-content-center my-3">
             <div class="col-lg-12 text-center">
-                <button type="button" id="inscription" class="btn mx-3 rounded-pill"  href="{{ route('register') }}" style="background-color: #65B06D;"><strong>Inscription</strong></button>
-                <button type="button"  id="connexion" class="btn mx-3 rounded-pill" href="{{ route('login') }}" style="background-color: #3A6083;"><strong>Connexion</strong></button>
+                <a type="button" id="inscription" class="btn mx-3 rounded-pill"  href="{{ route('register') }}" style="background-color: #65B06D;"><strong>Inscription</strong></a>
+                <a type="button" id="connexion" class="btn mx-3 rounded-pill" href="{{ route('login') }}" style="background-color: #3A6083;"><strong>Connexion</strong></a>
             </div>
         </div>
     </div>

@@ -49,7 +49,7 @@
         @media (max-width: 767px) {
             #logo
             {
-                width: 70px;
+                width: 200px !important;
             }
 
             .btn-container button {
@@ -85,7 +85,7 @@
                 <div class="col-lg-8 white_card pt-4" style="height: 300px;">
                     <form method="POST" action="{{ route('connexion') }}">
                         @csrf
-                        <h2 class="text-center" style="color: green; font-weight: bolder; font-family: 'DejaVu Serif Condensed';">Se connecter</h2>
+                        <h4 class="text-center" style="color: #65B06D; font-weight: bolder; font-family: 'Poppins', sans-serif;">Se connecter</h4>
                         <div class="mb-3">
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
@@ -95,7 +95,7 @@
                         <div class="mb-3 float-end text-black-50">
                             <a href="" class="text-decoration-underline">Mot de passe oublié?</a>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Connexion</button>
+                        <button type="submit" class="btn w-100 text-light" style="background-color: #3A6083">Connexion</button>
                         <div class="mb-3 mt-3 text-black-50 text-center">
                             Vous n'avez de compte? <a href="{{ route('register') }}" class="text-decoration-underline">S'inscrire</a>
                         </div>

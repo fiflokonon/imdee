@@ -49,7 +49,7 @@
         @media (max-width: 767px) {
             #logo
             {
-                width: 70px;
+                width: 200px !important;
             }
 
             .btn-container button {
@@ -61,7 +61,7 @@
 </head>
 
 <body class="bg-success">
-<div class="container" style="margin-top: 100px;">
+<div class="container" style="margin-top: 50px;">
     <div class="row justify-content-center">
         <div class="col-lg-4 float-start" style="margin-top: 100px; padding: 20px;">
             <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 400px;">
@@ -85,7 +85,7 @@
                 <div class="col-lg-8 white_card pt-4" style="height: 520px;">
                     <form action="{{ route('inscription') }}" method="POST">
                         @csrf
-                        <h2 class="text-center" style="color: green; font-weight: bolder; font-family: 'DejaVu Serif Condensed';">S'inscrire</h2>
+                        <h3 class="text-center" style="color: #65B06D; font-family: 'Poppins', sans-serif;">S'inscrire</h3>
                         <div class="mb-3">
                             <input type="nom" name="nom" class="form-control" id="exampleNom" aria-describedby="emailHelp" placeholder="Nom">
                         </div>
@@ -112,7 +112,7 @@
                                 <input type="radio" value="candidat" name="role"  id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Candidat(e)</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Inscription</button>
+                        <button type="submit" class="btn w-100 text-light" style="background-color: #65B06D">Inscription</button>
                         <div class="mb-3 mt-3 text-black-50 text-center">
                             Vous avez déjà un compte? <a href="{{ route('login') }}" class="text-decoration-underline">Se connecter</a>
                         </div>
