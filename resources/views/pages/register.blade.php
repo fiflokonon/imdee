@@ -47,6 +47,14 @@
         }
 
     </style>
+    <script>
+        function detectMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+        if (detectMobileDevice()) {
+        window.location.href = '/m.register';
+    }
+</script>
 </head>
 
 <body class="bg-success">
@@ -156,14 +164,6 @@
 <script src="vendors/chart_am/chart-custom.js"></script>
 
 <script src="js/custom.js"></script>
-<script>
-    function detectMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-    if (detectMobileDevice()) {
-        window.location.href = '/m.register';
-    }
-</script>
 </body>
 
 </html>
