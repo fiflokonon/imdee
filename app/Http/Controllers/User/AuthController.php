@@ -38,7 +38,6 @@ class AuthController extends Controller
         $user->contact = $validatedData['contact'];
         $user->statut = true;;
         $user->save();
-        #return view('pages.profile');
         return redirect()->route('profile');
     }
 
