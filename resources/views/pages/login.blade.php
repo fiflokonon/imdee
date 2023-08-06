@@ -2,7 +2,6 @@
 <html lang="zxx">
 
 <head>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Marketing</title>
@@ -45,30 +44,15 @@
             background-size: cover;
             background-image: url("img/Background dégradé.png");
         }
-
-        @media (max-width: 767px) {
-            body{
-                background-repeat: no-repeat;
-                background-size: auto;
-                background-image: url("img/Background dégradé.png");
-            }
-            #logo
-            {
-                width: 200px !important;
-            }
-
-            .btn-container button {
-                margin: 0 5px;
-            }
-            #content-logo {
-                margin-left: 100px;
-            }
-            #content{
-                margin-top: 0!important;
-            }
-        }
-
     </style>
+    <script>
+        function detectMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        if (detectMobileDevice()) {
+            window.location.href = '/m.login';
+        }
+    </script>
 </head>
 
 <body class="bg-success">

@@ -46,28 +46,6 @@
             background-image: url("img/Background dégradé.png");
         }
 
-        @media (max-width: 767px) {
-            body{
-                background-size: auto;
-            }
-            #logo
-            {
-                width: 200px !important;
-                justify-content: center;
-            }
-
-            .btn-container button {
-                margin: 0 5px;
-            }
-            #content-logo {
-                margin-left: 100px;
-                margin-top: 0!important;
-            }
-            #content{
-                margin-top: 0!important;
-            }
-        }
-
     </style>
 </head>
 
@@ -182,14 +160,7 @@
     function detectMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
-
-
     if (detectMobileDevice()) {
-        // Charger le fichier CSS pour le style mobile
-        //var link = document.createElement('link');
-        //link.rel = 'stylesheet';
-        //link.href = 'mobile.css';
-        //document.head.appendChild(link);
         window.location.href = '/m.register';
     }
 </script>

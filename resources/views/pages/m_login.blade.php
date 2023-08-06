@@ -42,7 +42,7 @@
     <style>
         body{
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: cover;
             background-image: url("img/Background dégradé.png");
         }
         input{
@@ -53,59 +53,42 @@
 
 <body class="bg-success">
 <div class="container" id="content">
-    <div class="justify-content-center">
-        <div class="col-lg-12 text-center" style="padding: 20px;" id="content-logo">
+    <div class="justify-content-center my-5">
+        <div class="col-lg-4" style="padding: 20px;" id="content-logo">
             <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 200px;">
         </div>
-        <div class="col-lg-12">
-            @if (session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-            @endif
-            @if($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+        <div class="col-lg-6 mr-5 ml-10" >
             <div class="row justify-content-center">
-                <div class="col-lg-8 pt-4" style="height: 520px;">
-                    <form action="{{ route('inscription') }}" method="POST">
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <div class="col-lg-8 pt-4" style="height: 300px;">
+                    <form method="POST" action="{{ route('connexion') }}">
                         @csrf
-                        <h3 class="text-center text-light" style="font-family: 'Poppins', sans-serif;">S'inscrire</h3>
+                        <h3 class="text-center text-light" style="font-weight: bolder; font-family: 'Poppins', sans-serif;">Se connecter</h3>
                         <div class="mb-3">
-                            <input type="nom" name="nom" class="form-control" id="exampleNom" aria-describedby="emailHelp" placeholder="Nom">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="prenoms" class="form-control" id="exampleInputPrenoms" placeholder="Prénoms">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email">
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" name="contact" class="form-control" id="exampleInputTel" placeholder="Contact">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="mb-3">
                             <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
                         </div>
-                        <div class="mb-3">
-                            <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1" placeholder="Comfirmer mot de passe">
+                        <div class="mb-3 float-end text-black-50">
+                            <a href="" class="text-decoration-underline">Mot de passe oublié?</a>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-6">
-                                <input type="radio" value="recruteur" name="role" id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Recruteur</label>
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="radio" value="candidat" name="role"  id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Candidat(e)</label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn w-100 text-light" style="background-color: #65B06D">Inscription</button>
+                        <button type="submit" class="btn w-100 text-light" style="background-color: #3A6083">Connexion</button>
                         <div class="mb-3 mt-3 text-black-50 text-center">
-                            Vous avez déjà un compte? <a href="{{ route('login') }}" class="text-decoration-underline">Se connecter</a>
+                            Vous n'avez de compte? <a href="{{ route('register') }}" class="text-decoration-underline">S'inscrire</a>
                         </div>
                     </form>
                 </div>
