@@ -26,7 +26,7 @@ Route::get('/register', function () {
     return view('pages.register');
 })->name('register');
 Route::get('/m.register', function () {
-    return view('pages.m.register');
+    return view('pages.m_register');
 })->name('m.register');
 
 Route::get('/profile', function () {
