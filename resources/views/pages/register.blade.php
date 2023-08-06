@@ -72,12 +72,12 @@
 </head>
 
 <body class="bg-success">
-<div class="container">
-    <div class="justify-content-center">
-        <div class="col-lg-12" style="margin-left: 100px; padding: 20px;" id="content-logo">
-            <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 200px;">
+<div class="container" style="margin-top: 50px;" id="content">
+    <div class="row justify-content-center">
+        <div class="col-lg-4" style="margin-top: 100px; padding: 20px;" id="content-logo">
+            <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 400px;">
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-6 float-end">
             @if (session('error'))
                 <div class="alert alert-danger">
                     {{ session('error') }}
@@ -93,7 +93,7 @@
                 </div>
             @endif
             <div class="row justify-content-center">
-                <div class="col-lg-8 pt-4" style="height: 520px;">
+                <div class="col-lg-8 white_card pt-4" style="height: 520px;">
                     <form action="{{ route('inscription') }}" method="POST">
                         @csrf
                         <h3 class="text-center" style="color: #65B06D; font-family: 'Poppins', sans-serif;">S'inscrire</h3>
