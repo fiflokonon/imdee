@@ -101,7 +101,7 @@
                                 <input type="radio" value="candidat" name="role"  id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Candidat(e)</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn w-100 text-light" style="background-color: #65B06D">Inscription</button>
+                        <button type="submit" class="btn w-50 text-light mx-3 rounded-pill" style="background-color: #65B06D">Inscription</button>
                         <div class="mb-3 mt-3 text-black-50 text-center">
                             Vous avez déjà un compte? <a href="{{ route('login') }}" class="text-decoration-underline">Se connecter</a>
                         </div>

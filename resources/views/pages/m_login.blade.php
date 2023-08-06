@@ -46,7 +46,7 @@
             background-image: url("img/Background dégradé.png");
         }
         input{
-            background: none;
+            background: transparent;
         }
     </style>
 </head>
