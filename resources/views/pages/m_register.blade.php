@@ -46,7 +46,12 @@
             background-image: url("img/Background dégradé.png");
         }
         input{
-            background: transparent;
+            background: transparent !important;
+            border-radius: 14px !important;
+            color: white !important;
+        }
+        input::placeholder{
+            color: white!important;
         }
     </style>
 </head>
@@ -97,15 +102,15 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-lg-6">
-                                <input type="radio" value="recruteur" name="role" id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Recruteur</label>
+                                <input type="radio" value="recruteur" name="role" id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-light">Recruteur</label>
                             </div>
                             <div class="col-lg-6">
-                                <input type="radio" value="candidat" name="role"  id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-dark">Candidat(e)</label>
+                                <input type="radio" value="candidat" name="role"  id="exampleInputPassword1"> <label for="exampleInputRadio" class="text-light">Candidat(e)</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn w-100 text-light" style="background-color: #65B06D">Inscription</button>
-                        <div class="mb-3 mt-3 text-black-50 text-center">
-                            Vous avez déjà un compte? <a href="{{ route('login') }}" class="text-decoration-underline">Se connecter</a>
+                            <button type="submit" class="btn w-50 text-light rounded-pill" style="background-color: #65B06D; margin-left: 90px;">Inscription</button>
+                        <div class="mb-3 mt-3 text-light-50 text-center">
+                            Vous avez déjà un compte? <a href="{{ route('login') }}" class="text-decoration-underline text-light">Se connecter</a>
                         </div>
                     </form>
                 </div>

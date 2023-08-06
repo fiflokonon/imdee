@@ -42,11 +42,16 @@
     <style>
         body{
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: inherit;
             background-image: url("img/Background dégradé.png");
         }
         input{
-            background: transparent;
+            background: transparent !important;
+            border-radius: 14px !important;
+            color: white !important;
+        }
+        input::placeholder{
+            color: white!important;
         }
     </style>
 </head>
@@ -54,8 +59,8 @@
 <body class="bg-success">
 <div class="container" id="content">
     <div class="justify-content-center my-5">
-        <div class="col-lg-4" style="padding: 20px;" id="content-logo">
-            <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 200px;">
+        <div class="col-lg-8" style="padding: 20px;" id="content-logo">
+            <img src="img/logoimdeewith.png" alt="Logo" id="logo" class="img-fluid" style="width: 200px; margin-left: 55px;">
         </div>
         <div class="col-lg-6 mr-5 ml-10" >
             <div class="row justify-content-center">
@@ -78,17 +83,17 @@
                         @csrf
                         <h3 class="text-center text-light" style="font-weight: bolder; font-family: 'Poppins', sans-serif;">Se connecter</h3>
                         <div class="mb-3">
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            <input type="email" name="email" class="form-control text-light" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="mb-3">
                             <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
                         </div>
                         <div class="mb-3 float-end text-black-50">
-                            <a href="" class="text-decoration-underline">Mot de passe oublié?</a>
+                            <a href="" class="text-decoration-underline text-light">Mot de passe oublié?</a>
                         </div>
-                        <button type="submit" class="btn w-100 text-light" style="background-color: #3A6083">Connexion</button>
-                        <div class="mb-3 mt-3 text-black-50 text-center">
-                            Vous n'avez de compte? <a href="{{ route('register') }}" class="text-decoration-underline">S'inscrire</a>
+                        <button type="submit" class="btn w-50 text-light rounded-pill" style="background-color: #3A6083; margin-left: 90px;">Connexion</button>
+                        <div class="mb-3 mt-3 text-light-50 text-center">
+                            Vous n'avez de compte? <a href="{{ route('register') }}" class="text-decoration-underline text-light">S'inscrire</a>
                         </div>
                     </form>
                 </div>
